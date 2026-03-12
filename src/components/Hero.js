@@ -59,9 +59,9 @@ const Hero = () => {
             </Box>
 
             <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-                <Grid container spacing={{ xs: 4, md: 8 }} alignItems="center" sx={{ mt: 10}}>
+                <Grid container spacing={{ xs: 4, md: 8 }} alignItems="center" sx={{ mt: { xs: 7, md: 10 } }}>
                     {/* Left content */}
-                    <Grid size={{ xs: 12, md: 7 }}>
+                    <Grid size={{ xs: 12, md: 7 }} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
                         <Grid container direction="column" spacing={2}>
                             <Grid>
                                 <motion.div
@@ -142,7 +142,7 @@ const Hero = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: 0.9, ease: 'easeOut' }}
                                 >
-                                    <Grid container spacing={2}>
+                                    <Grid container spacing={2} justifyContent={{ xs: 'center', sm: 'flex-start' }} sx={{ mt: 3 }}>
                                         <Grid>
                                             <Button
                                                 variant="contained"
