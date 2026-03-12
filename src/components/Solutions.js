@@ -99,6 +99,9 @@ const Solutions = () => {
                       borderRadius: 4,
                       height: '100%',
                       minHeight: 220,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         boxShadow: '0 30px 60px rgba(0,0,0,0.12)',

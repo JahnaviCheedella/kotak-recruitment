@@ -81,20 +81,26 @@ const DreamAndMDRT = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                style={{ height: '100%',  }}
               >
                 <motion.div
                   whileHover={{ x: 12, scale: 1.02 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                  style={{ height: '100%' }}
                 >
                   <Paper
                     elevation={2}
                     sx={{
-                      p: 3,
+                      p: 3, 
                       border: '1px solid rgba(0,0,0,0.06)',
                       borderRadius: 3,
                       maxWidth: index === 4 ? 520 : 'none',
                       mx: index === 4 ? 'auto' : 0,
                       transition: 'all 0.3s ease',
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       '&:hover': {
                         boxShadow: `0 12px 30px ${dream.color}15`,
                         borderColor: `${dream.color}40`,
@@ -225,10 +231,12 @@ const DreamAndMDRT = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
+                style={{ height: '100%' }}
               >
                 <motion.div
                   whileHover={{ y: -12, scale: 1.04 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  style={{ height: '100%' }}
                 >
                   <Paper
                     elevation={2}
@@ -238,6 +246,10 @@ const DreamAndMDRT = () => {
                       borderRadius: 4,
                       overflow: 'hidden',
                       transition: 'all 0.3s ease',
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       '&:hover': {
                         boxShadow: `0 30px 60px ${item.color}20`,
                         borderColor: `${item.color}40`,

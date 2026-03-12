@@ -23,6 +23,7 @@ import StarIcon from '@mui/icons-material/Star';
 import WidgetsIcon from '@mui/icons-material/Widgets';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { motion, AnimatePresence } from 'framer-motion';
 import kotakLogo from "../assets/kotak-logo.png";
 
@@ -79,7 +80,7 @@ const Navbar = () => {
         }}
       >
         <Toolbar sx={{ py: 1, maxWidth: 1400, mx: 'auto', width: '100%' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', }}>
             {/* Logo */}
             <Box
               component="img"
@@ -100,53 +101,132 @@ const Navbar = () => {
               }}
             />
 
-            {/* Nav Items */}
-            <Grid>
+            {/* Nav Items + WhatsApp */}
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 0, md: 1 }, flexShrink: 0 }}>
               {isMobile ? (
-                <IconButton onClick={() => setMobileOpen(true)} sx={{ color: '#fff' }}>
-                  <MenuIcon />
-                </IconButton>
+                <>
+                  {/* WhatsApp in middle on mobile */}
+                  <Box
+                    component="a"
+                    href="https://wa.me/919948438426?text=Hi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 0.8,
+                      textDecoration: 'none',
+                      color: '#25D366',
+                      background: 'rgba(37, 211, 102, 0.12)',
+                      px: 1.5,
+                      py: 0.6,
+                      borderRadius: 5,
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      '&:hover': {
+                        background: 'rgba(37, 211, 102, 0.25)',
+                        transform: 'scale(1.05)',
+                      },
+                    }}
+                  >
+                    <WhatsAppIcon sx={{ fontSize: { xs: 16, md: 20 } }} />
+                    <Typography
+                      sx={{
+                        fontSize: { xs: '0.65rem', md: '0.78rem' },
+                        fontWeight: 600,
+                        color: '#fff',
+                        letterSpacing: '0.5px',
+                        // display: { xs: 'none', sm: 'block' },
+                      }}
+                    >
+                      9948438426
+                    </Typography>
+                  </Box>
+                  <IconButton onClick={() => setMobileOpen(true)} sx={{ color: '#fff' }}>
+                    <MenuIcon />
+                  </IconButton>
+                </>
               ) : (
-                <Grid container spacing={0.5} alignItems="center" justifyContent="flex-end">
-                  {navItems.map((item) => (
-                    <Grid key={item.label}>
-                      <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.95 }}>
-                        <Box
-                          onClick={() => handleNavClick(item.href)}
-                          sx={{
-                            px: 2,
-                            py: 1,
-                            color: activeSection === item.href ? '#FF6B6B' : '#fff',
-                            cursor: 'pointer',
-                            borderRadius: 2,
-                            fontSize: '0.88rem',
-                            fontWeight: activeSection === item.href ? 700 : 500,
-                            transition: 'all 0.3s ease',
-                            position: 'relative',
-                            '&:hover': {
-                              background: 'rgba(255,255,255,0.12)',
-                            },
-                            '&::after': activeSection === item.href ? {
-                              content: '""',
-                              position: 'absolute',
-                              bottom: 2,
-                              left: '50%',
-                              transform: 'translateX(-50%)',
-                              width: 20,
-                              height: 3,
+                <>
+                  <Grid container spacing={0} alignItems="center" justifyContent="flex-end" sx={{ flexWrap: 'nowrap' }}>
+                    {navItems.map((item) => (
+                      <Grid key={item.label}>
+                        <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.95 }}>
+                          <Box
+                            onClick={() => handleNavClick(item.href)}
+                            sx={{
+                              px: 1.4,
+                              py: 1,
+                              color: activeSection === item.href ? '#FF6B6B' : '#fff',
+                              cursor: 'pointer',
                               borderRadius: 2,
-                              background: 'linear-gradient(90deg, #E63946, #FF6B6B)',
-                            } : {},
-                          }}
-                        >
-                          {item.label}
-                        </Box>
-                      </motion.div>
-                    </Grid>
-                  ))}
-                </Grid>
+                              fontSize: '0.82rem',
+                              fontWeight: activeSection === item.href ? 700 : 500,
+                              whiteSpace: 'nowrap',
+                              transition: 'all 0.3s ease',
+                              position: 'relative',
+                              '&:hover': {
+                                background: 'rgba(255,255,255,0.12)',
+                              },
+                              '&::after': activeSection === item.href ? {
+                                content: '""',
+                                position: 'absolute',
+                                bottom: 2,
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                width: 20,
+                                height: 3,
+                                borderRadius: 2,
+                                background: 'linear-gradient(90deg, #E63946, #FF6B6B)',
+                              } : {},
+                            }}
+                          >
+                            {item.label}
+                          </Box>
+                        </motion.div>
+                      </Grid>
+                    ))}
+                  </Grid>
+                  {/* WhatsApp at end on desktop */}
+                  <Box
+                    component="a"
+                    href="https://wa.me/919948438426?text=Hi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 0.8,
+                      textDecoration: 'none',
+                      color: '#25D366',
+                      background: 'rgba(37, 211, 102, 0.12)',
+                      px: 1.5,
+                      py: 0.6,
+                      borderRadius: 5,
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      whiteSpace: 'nowrap',
+                      '&:hover': {
+                        background: 'rgba(37, 211, 102, 0.25)',
+                        transform: 'scale(1.05)',
+                      },
+                    }}
+                  >
+                    <WhatsAppIcon sx={{ fontSize: 22 }} />
+                    <Typography
+                      sx={{
+                        fontSize: '0.88rem',
+                        fontWeight: 600,
+                        color: '#fff',
+                        letterSpacing: '0.5px',
+                      }}
+                    >
+                      9948438426
+                    </Typography>
+                  </Box>
+                </>
               )}
-            </Grid>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
@@ -170,29 +250,6 @@ const Navbar = () => {
               <CloseIcon />
             </IconButton>
           </Grid>
-          {/* <Grid sx={{ px: 2, pb: 3, textAlign: 'center' }}>
-            <Box
-              sx={{
-                width: 60,
-                height: 60,
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #E63946, #FF6B6B)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontWeight: 900,
-                color: '#fff',
-                fontSize: '1.5rem',
-                mx: 'auto',
-                mb: 1,
-              }}
-            >
-              K
-            </Box>
-            <Typography variant="h6" sx={{ fontWeight: 700, color: '#fff' }}>
-              Kotak Life
-            </Typography>
-          </Grid> */}
           <Grid size="grow">
             <AnimatePresence>
               <List>
@@ -234,6 +291,7 @@ const Navbar = () => {
                   </motion.div>
                 ))}
               </List>
+
             </AnimatePresence>
           </Grid>
         </Grid>

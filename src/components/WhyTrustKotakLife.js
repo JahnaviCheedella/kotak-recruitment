@@ -107,17 +107,22 @@ const WhyTrustKotakLife = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.12 }}
+                style={{ height: '100%' }}
               >
-                <motion.div whileHover={{ y: -8, scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }}>
+                <motion.div whileHover={{ y: -8, scale: 1.03 }} transition={{ type: 'spring', stiffness: 300 }} style={{ height: '100%' }}>
                   <Paper
                     sx={{
                       p: 3,
+                      height: '100%',
                       textAlign: 'center',
                       background: 'rgba(255,255,255,0.06)',
                       backdropFilter: 'blur(12px)',
                       border: '1px solid rgba(255,255,255,0.1)',
                       borderRadius: 4,
                       transition: 'all 0.3s ease',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       '&:hover': {
                         background: 'rgba(255,255,255,0.1)',
                         boxShadow: `0 20px 40px ${item.color}20`,
@@ -168,15 +173,20 @@ const WhyTrustKotakLife = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
+                style={{ height: '100%' }}
               >
-                <motion.div whileHover={{ x: 10 }} transition={{ type: 'spring', stiffness: 400 }}>
+                <motion.div whileHover={{ x: 10 }} transition={{ type: 'spring', stiffness: 400 }} style={{ height: '100%' }}>
                   <Paper
                     sx={{
                       p: 3,
+                      height: '100%',
                       background: metric.highlight ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.04)',
                       backdropFilter: 'blur(10px)',
                       border: '1px solid rgba(255,255,255,0.08)',
                       borderRadius: 3,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         background: 'rgba(255,255,255,0.12)',

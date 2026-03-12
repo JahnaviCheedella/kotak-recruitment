@@ -70,10 +70,12 @@ const DocumentsNeeded = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                style={{ height: '100%' }}
               >
                 <motion.div
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ type: 'spring', stiffness: 300 }}
+                  style={{ height: '100%' }}
                 >
                   <Paper
                     elevation={2}
@@ -81,6 +83,10 @@ const DocumentsNeeded = () => {
                       p: 3,
                       border: '2px solid rgba(0,0,0,0.04)',
                       borderRadius: 3,
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         boxShadow: `0 20px 40px ${doc.color}12`,

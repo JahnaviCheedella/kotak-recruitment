@@ -73,7 +73,7 @@ const WhyAdvisor = () => {
         </Grid>
 
         {/* Reason Cards */}
-        <Grid container spacing={3}>
+        <Grid container spacing={3} >
           {reasons.map((item, index) => (
             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
               <motion.div
@@ -81,10 +81,12 @@ const WhyAdvisor = () => {
                 whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
+                style={{ height: '100%' }}
               >
                 <motion.div
                   whileHover={{ y: -12, scale: 1.02 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  style={{ height: '100%' }}
                 >
                   <Paper
                     elevation={2}
@@ -93,6 +95,9 @@ const WhyAdvisor = () => {
                       height: '100%',
                       border: '1px solid rgba(0,0,0,0.06)',
                       borderRadius: 4,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       transition: 'box-shadow 0.4s ease',
                       '&:hover': {
                         boxShadow: '0 30px 60px rgba(0,0,0,0.12)',

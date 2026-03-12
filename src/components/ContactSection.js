@@ -46,7 +46,6 @@ const contactItems = [
     iconColor: "#81C784",
     href: "tel:9948438426",
   },
-  // ...existing code...
 ];
 
 const ContactSection = () => {
@@ -174,14 +173,14 @@ const ContactSection = () => {
                       variant="body2"
                       sx={{ color: "#fff", fontWeight: 500, mt: 0.5 }}
                     >
-                      KOTAK MAHINDRA LIFE INSURANCE COMPANY LTD
+                      KOTAK LIFE INSURANCE
                     </Typography>
                     <Typography
                       variant="body2"
                       sx={{ color: "#fff", fontWeight: 500 }}
                     >
-                      9th Floor, Intellion Square (Bldg No.4), Infinity IT Park,
-                      Gen.AK Vaidhya Marg, Malad(E), Mumbai - 400097
+                      3RD Floor 302, Legend Crystal, Near paradise Circle, Above
+                      Bandhan Bank, Secunderabad - 500003
                     </Typography>
                   </Grid>
                 </Grid>
