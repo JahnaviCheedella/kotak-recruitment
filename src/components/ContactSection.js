@@ -167,7 +167,7 @@ const ContactSection = () => {
                       target="_blank"
                       rel="noopener"
                     >
-                      www.kotaklife.com
+                      kotak-recruitment.vercel.app
                     </Typography>
                     <Typography
                       variant="body2"
@@ -346,7 +346,7 @@ const ContactSection = () => {
                     target="_blank"
                     rel="noopener" 
                   >
-                    www.kotaklife.com
+                    kotak-recruitment.vercel.app
                   </Typography>
                   <Typography
                     variant="body2"
