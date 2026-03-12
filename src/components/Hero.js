@@ -19,6 +19,7 @@ const Hero = () => {
             sx={{
                 minHeight: '100vh',
                 position: 'relative',
+                py: { xs: 4, md: 12 },
                 display: 'flex',
                 alignItems: 'center',
                 overflow: 'hidden',

@@ -44,7 +44,7 @@ const contactItems = [
     value: "9948438426",
     iconBg: "rgba(76,175,80,0.2)",
     iconColor: "#81C784",
-    href: "tel:9948438426",
+    href: "https://wa.me/919948438426?text=Hi",
   },
 ];
 
@@ -163,7 +163,7 @@ const ContactSection = () => {
                       variant="body2"
                       sx={{ color: "#D4A843", fontWeight: 600 }}
                       component="a"
-                      href="https://www.kotaklife.com"
+                      href="https://kotak-recruitment.vercel.app"
                       target="_blank"
                       rel="noopener"
                     >
@@ -342,9 +342,9 @@ const ContactSection = () => {
                     variant="body2"
                     sx={{ color: "#D4A843", fontWeight: 600 }}
                     component="a"
-                    href="https://www.kotaklife.com"
+                    href="https://kotak-recruitment.vercel.app"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener" 
                   >
                     www.kotaklife.com
                   </Typography>
@@ -352,14 +352,14 @@ const ContactSection = () => {
                     variant="body2"
                     sx={{ color: "#fff", fontWeight: 500, mt: 0.5 }}
                   >
-                    KOTAK MAHINDRA LIFE INSURANCE COMPANY LTD
+                    KOTAK LIFE INSURANCE
                   </Typography>
                   <Typography
                     variant="body2"
                     sx={{ color: "#fff", fontWeight: 500 }}
                   >
-                    9th Floor, Intellion Square (Bldg No.4), Infinity IT Park,
-                    Gen.AK Vaidhya Marg, Malad(E), Mumbai - 400097
+                    3rd Floor 302, Legend Crystal, Near paradise Circle, Above
+                    Bandhan Bank, Secunderabad - 500003
                   </Typography>
                 </Grid>
               </Grid>
