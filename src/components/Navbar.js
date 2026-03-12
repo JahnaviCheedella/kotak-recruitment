@@ -129,10 +129,15 @@ const Navbar = () => {
                       },
                     }}
                   >
-                    <WhatsAppIcon sx={{ fontSize: { xs: 16, md: 20 } }} />
+                    <WhatsAppIcon
+                      sx={{
+                        // fontSize: { xs: 16, md: 20 }
+                        fontSize: 20
+                      }} />
                     <Typography
                       sx={{
-                        fontSize: { xs: '0.65rem', md: '0.78rem' },
+                        // fontSize: { xs: '0.65rem', md: '0.78rem' },
+                        fontSize: '0.78rem',
                         fontWeight: 600,
                         color: '#fff',
                         letterSpacing: '0.5px',
