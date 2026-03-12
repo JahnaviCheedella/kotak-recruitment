@@ -158,7 +158,7 @@ const ContactSection = () => {
                   </Typography>
                 </Grid>
                 <Grid sx={{ display: { xs: "none", md: "block" }, mt: 2 }}>
-                  {/* Website and Office Location */}
+                  {/* Website and Office Location for md devices*/}
                   <Grid sx={{ mt: 2 }}>
                     <Typography
                       variant="body2"
@@ -329,6 +329,41 @@ const ContactSection = () => {
                   ))}
                 </Grid>
               </Paper>
+
+              <Grid
+                sx={{
+                  display: { xs: "block", md: "none" },
+                  mt: 2,
+                  textAlign: "center",
+                }}
+              >
+                {/* Website and Office Location for xs devices */}
+                <Grid sx={{ mt: 2 }}>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "#D4A843", fontWeight: 600 }}
+                    component="a"
+                    href="https://www.kotaklife.com"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    www.kotaklife.com
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "#fff", fontWeight: 500, mt: 0.5 }}
+                  >
+                    KOTAK MAHINDRA LIFE INSURANCE COMPANY LTD
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "#fff", fontWeight: 500 }}
+                  >
+                    9th Floor, Intellion Square (Bldg No.4), Infinity IT Park,
+                    Gen.AK Vaidhya Marg, Malad(E), Mumbai - 400097
+                  </Typography>
+                </Grid>
+              </Grid>
             </motion.div>
           </Grid>
         </Grid>
